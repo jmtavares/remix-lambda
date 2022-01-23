@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet, useLoaderData } from "remix";
+import { NavLink, Outlet, useLoaderData } from "remix";
 import styles from "../styles/universities.css";
 
 export const meta = () => {
