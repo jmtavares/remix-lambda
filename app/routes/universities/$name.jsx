@@ -1,4 +1,7 @@
 import { useLoaderData } from "remix";
+import styles from "../../styles/university.css";
+
+export const links = () => [{ rel: "stylesheet", href: styles }];
 
 export const meta = ({ data }) => {
   return {
@@ -26,8 +29,8 @@ export default function University() {
   const university = useLoaderData();
 
   return (
-    <div>
-      <h1>University</h1>
+    <div className="university-container">
+      <h3>{university[0].name}</h3>
       {Object.keys(university[0]).map((key) => {
         return (
           <li key={key}>

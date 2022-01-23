@@ -13,7 +13,7 @@ export const loader = async () => {
   const res = await fetch(
     "http://universities.hipolabs.com/search?country=Portugal"
   );
-  const universities = await res.json();  
+  const universities = await res.json();
 
   return Array.from(new Set(universities.map((u) => u.name)));
 };
@@ -23,17 +23,14 @@ export default function Universities() {
 
   return (
     <div>
-      <h1>Universities</h1>
-      <Link to="/">
-        <button type="button">Homepage</button>
-      </Link>
+      <h2>Universities</h2>
       <div className="universities-container">
         <ul>
           <NavLink
             to={encodeURI("jalksjdlaksjd")}
             prefetch="intent"
             style={({ isActive }) =>
-              isActive ? { color: "blue" } : { color: "black" }
+              isActive ? { color: "#dd354c" } : { color: "#273747" }
             }
           >
             <p>Not found</p>
@@ -45,7 +42,7 @@ export default function Universities() {
                   to={encodeURI(name)}
                   prefetch="intent"
                   style={({ isActive }) =>
-                    isActive ? { color: "blue" } : { color: "black" }
+                    isActive ? { color: "#dd354c" } : { color: "#273747" }
                   }
                 >
                   <p>{name}</p>

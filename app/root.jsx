@@ -4,12 +4,17 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
 } from "remix";
+import Header from "./components/header";
+import styles from "./styles/global.css";
+
 
 export function meta() {
   return { title: "Remix Lambda" };
 }
+
+export const links = () => [{ rel: "stylesheet", href: styles }];
 
 export default function App() {
   return (
@@ -21,7 +26,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Header />
+        <main>
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}

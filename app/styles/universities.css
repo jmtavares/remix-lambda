@@ -1,11 +1,15 @@
 .universities-container {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 60% 40%;
 }
 
 .universities-container a {
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
+
+.universities-container a:hover {
+  text-decoration: underline;
+}
 
 .universities-container p {
   display: block;

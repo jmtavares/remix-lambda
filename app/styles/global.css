@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  background-color: #f7f8f9;
+  color: #273747;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header a {
+  background-color: #273747;
+  color: #ffffff;
+  padding: 10px 20px;  
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+header a:hover {
+  background-color: #dd354c;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
