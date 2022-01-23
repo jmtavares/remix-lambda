@@ -1,0 +1,24 @@
+.universities-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.universities-container a {
+    text-decoration: none;
+  }
+
+.universities-container p {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.universities-container ul {
+  padding: 0;
+  margin: 0;
+}
+
+.universities-container li {
+  list-style: none;
+}
